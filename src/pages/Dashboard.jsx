@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import Products from './Products';
+import Welcome from './Welcome';
 // import Transaksi from './Transaksi'; // Siapkan nanti
 // import Laporan from './Laporan';     // Siapkan nanti
 
@@ -32,11 +33,7 @@ const Dashboard = () => {
         {activeMenu === 'produk' && <Products />}
         {activeMenu === 'transaksi' && <p>Halaman Transaksi akan ditampilkan di sini</p>}
         {activeMenu === 'laporan' && <p>Halaman Laporan akan ditampilkan di sini</p>}
-        {!activeMenu && (
-          <p className="text-lg font-medium text-gray-700">
-            Selamat datang di <span className="text-blue-600 font-semibold">KasirKU</span>! Silakan pilih menu di atas.
-          </p>
-        )}
+        {!activeMenu && <Welcome />}
       </div>
     </div>
   );
